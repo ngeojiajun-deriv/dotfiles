@@ -8,3 +8,7 @@ zc = close folding
 shift-w = new split (dir=> v-horizontal, h-vertical)
 gT,gt = tab switch
 :tabnew = new tab
+
+#Search and replace
+s/orig/replace/<g> (Note: s means current line and %s means entire file)
+
