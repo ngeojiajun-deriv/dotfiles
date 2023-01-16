@@ -14,5 +14,4 @@ tmux splitw;
 tmux new-window -n 'Enginnering Board' vim;
 
 #HELP
-tmux new-window -n 'Help me';
-less ~/help/vim-help
+tmux new-window -n 'Help me' less ~/help/vim-help;
