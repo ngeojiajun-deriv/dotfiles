@@ -1,0 +1,10 @@
+#Common shortcuts
+
+:Lexpore open explorer
+gg=G indent everything
+zo = open folding
+zc = close folding
+
+shift-w = new split (dir=> v-horizontal, h-vertical)
+gT,gt = tab switch
+:tabnew = new tab

@@ -1,0 +1,29 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = ngeojiajun-deriv
+	email = jia.jun@deriv.com
+
+[alias]
+	#common workflows
+	pum = pull upstream
+	poh = !git push origin HEAD
+	chk = checkout
+	chkb = checkout -b
+	cma = commit -a
+	aa = add .
+	uncommit = reset HEAD^1
+	nukechanges = reset --hard HEAD
+	lgaa = log --graph --all
+	lg = log --graph
+	fa = fetch --all
+	clonerecurse = clone --recurse-submodules
+
+	#remotes manipulation
+	lsrmt = remote -v
+	mvrmt = remote set-url
+	
+	#autogenerates
+	newignore = !touch .gitignore
+	ignore = !~/.commons/ignoreFile.sh
+	
