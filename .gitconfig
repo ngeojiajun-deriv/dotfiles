@@ -22,8 +22,16 @@
 	#remotes manipulation
 	lsrmt = remote -v
 	mvrmt = remote set-url
-	
+
 	#autogenerates
 	newignore = !touch .gitignore
 	ignore = !~/.commons/ignoreFile.sh
-	
+[rerere]
+	enabled = true
+[color]
+	ui = true
+	status = true
+	diff = true
+[core]
+	pager = less -r
+	editor = vim
