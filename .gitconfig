@@ -18,10 +18,12 @@
 	lg = log --graph
 	fa = fetch --all
 	clonerecurse = clone --recurse-submodules
+	pullrecurse = pull --recurse-submodules
 
 	#remotes manipulation
 	lsrmt = remote -v
-	mvrmt = remote set-url
+	mvrmt = remote rename
+	lnrmt = remote set-url
 
 	#autogenerates
 	newignore = !touch .gitignore

@@ -29,6 +29,15 @@ set wildmenu
 set wildmode=list:longest
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 colorscheme darkblue
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set cindent
+set smartindent
+hi StatusLine ctermbg=Magenta ctermfg=Black
+
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 " }}}
 
 
