@@ -6,7 +6,7 @@
 
 [alias]
 	#common workflows
-	pum = pull upstream
+	pum = pull upstream master
 	poh = !git push origin HEAD
 	chk = checkout
 	chkb = checkout -b
