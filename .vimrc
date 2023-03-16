@@ -35,6 +35,7 @@ set shiftwidth=2
 set expandtab
 set cindent
 set smartindent
+set mouse=a
 hi StatusLine ctermbg=Magenta ctermfg=Black
 
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
