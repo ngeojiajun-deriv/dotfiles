@@ -52,7 +52,7 @@ augroup filetype_vim
 augroup END
 " More Vimscripts code goes here.
 nmap <Tab> :tabnext<CR>
-
+nmap <S-Tab> :NERDTreeToggle<CR>
 " }}}
 
 " Plugins ---------------------------------------------------------------- {{{
@@ -70,3 +70,4 @@ Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 " }}}
+NERDTreeToggle
