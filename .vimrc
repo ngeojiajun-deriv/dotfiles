@@ -70,4 +70,3 @@ Plug 'preservim/nerdtree'
 Plug 'airblade/vim-gitgutter'
 call plug#end()
 " }}}
-NERDTreeToggle
