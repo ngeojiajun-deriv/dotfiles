@@ -31,7 +31,7 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 colorscheme darkblue
 
 set mouse=a
-set tabstop=2
+set tabstop=4
 set shiftwidth=2
 set expandtab
 set cindent
