@@ -3,6 +3,7 @@
 # Please adapt and uncomment the following lines:
 	name = ngeojiajun-deriv
 	email = jia.jun@deriv.com
+	signingkey = C98FFA50477ACB09
 
 [alias]
 	#common workflows
@@ -38,3 +39,5 @@
 [core]
 	pager = less -r
 	editor = vim
+[commit]
+	gpgsign = true
