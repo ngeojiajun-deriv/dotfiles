@@ -1,0 +1,6 @@
+\set PROMPT1 '%M:%> %[%033[1;35m%]%n@%/%[%033[0m%]%R%#%x '
+\pset null '[？からきしなのだ？]'
+\set COMP_KEYWORD_CASE upper
+\timing
+\x auto
+\set VERBOSITY verbose

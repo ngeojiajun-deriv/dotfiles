@@ -19,8 +19,11 @@
 	lg = log --graph
 	fa = fetch --all
 	clonerecurse = clone --recurse-submodules
-  pullrecurse = pull --recurse-submodules
-  aapm = add *.pm
+    s = status
+    rbi = rebase -i
+    ds = diff --staged
+    pullrecurse = pull --recurse-submodules
+    aapm = add *.pm
 
 	#remotes manipulation
 	lsrmt = remote -v
@@ -39,5 +42,6 @@
 [core]
 	pager = less -r
 	editor = vim
+    excludesfile='~/.gitignore'
 [commit]
 	gpgsign = true
