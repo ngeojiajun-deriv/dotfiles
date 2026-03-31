@@ -1,0 +1,48 @@
+{
+  "name": "nodejs-dev",
+  "description": "General Node.js/TypeScript development agent with testing and build tools",
+  "prompt": "You are an expert Node.js and TypeScript developer. Follow the conventions defined in the nodejs-dev skill (SKILL.md). Focus on strongly typed code, proper error handling, and maintainable architecture. Help with development, testing, debugging, and refactoring.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "toolsSettings": {
+    "execute_bash": {
+      "allowedCommands": [
+        "npm test",
+        "npm run test",
+        "npm run build",
+        "npm run lint",
+        "npm run lint:fix",
+        "npm run dev",
+        "npm run check",
+        "npm outdated",
+        "git status",
+        "git diff",
+        "git log --oneline -10",
+        "node --version",
+        "npm --version"
+      ],
+      "autoAllowReadonly": true
+    }
+  },
+  "resources": [
+    "file://package.json",
+    "file://tsconfig.json",
+    "file://README.md",
+    "skill://~/.kiro/skills/common-dev/SKILL.md",
+    "skill://~/.kiro/skills/nodejs-dev/SKILL.md"
+  ],
+  "keyboardShortcut": "ctrl+shift+n",
+  "welcomeMessage": "Ready to help with Node.js/TypeScript development!"
+}

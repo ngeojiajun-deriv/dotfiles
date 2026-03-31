@@ -1,0 +1,54 @@
+{
+  "name": "nodejs-bootstrap",
+  "description": "Autonomous Node.js/TypeScript agent for code bootstrapping — auto-allows file writes and bash commands",
+  "prompt": "You are an expert Node.js and TypeScript developer. Follow the conventions defined in the nodejs-dev skill (SKILL.md). Focus on strongly typed code, proper error handling, and maintainable architecture. You are in autonomous bootstrapping mode — create files, install dependencies, and set up project structure without asking for confirmation.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "toolsSettings": {
+    "execute_bash": {
+      "allowedCommands": [
+        "npm test",
+        "npm run test",
+        "npm run build",
+        "npm run lint",
+        "npm run lint:fix",
+        "npm run dev",
+        "npm run check",
+        "npm outdated",
+        "npm install",
+        "npm install *",
+        "npm install --save-dev *",
+        "git status",
+        "git diff",
+        "git log --oneline -10",
+        "node --version",
+        "npm --version",
+        "mkdir *",
+        "touch *"
+      ],
+      "autoAllowReadonly": true
+    }
+  },
+  "resources": [
+    "file://package.json",
+    "file://tsconfig.json",
+    "file://README.md",
+    "skill://~/.kiro/skills/common-dev/SKILL.md",
+    "skill://~/.kiro/skills/nodejs-dev/SKILL.md"
+  ],
+  "welcomeMessage": "Autonomous bootstrapping mode — ready to scaffold your Node.js/TypeScript project!"
+}
