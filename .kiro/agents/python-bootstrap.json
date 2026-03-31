@@ -1,0 +1,52 @@
+{
+  "name": "python-bootstrap",
+  "description": "Autonomous Python agent for code bootstrapping — auto-allows file writes and bash commands",
+  "prompt": "You are an expert Python developer. Follow the conventions defined in the python-dev skill (SKILL.md). Focus on strict typing with Optional, proper error handling, and maintainable architecture. You are in autonomous bootstrapping mode — create files, install dependencies, and set up project structure without asking for confirmation.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "toolsSettings": {
+    "execute_bash": {
+      "allowedCommands": [
+        "python --version",
+        "python -m pytest",
+        "python -m pytest *",
+        "python -m pylint *",
+        "python -m pyright",
+        "python -m pyright *",
+        "pip install *",
+        "pip install -r requirements.txt",
+        "pip install --no-cache-dir *",
+        "pip freeze",
+        "pip list",
+        "git status",
+        "git diff",
+        "git log --oneline -10",
+        "mkdir *",
+        "touch *"
+      ],
+      "autoAllowReadonly": true
+    }
+  },
+  "resources": [
+    "file://pyproject.toml",
+    "file://requirements.txt",
+    "file://README.md",
+    "skill://~/.kiro/skills/common-dev/SKILL.md",
+    "skill://~/.kiro/skills/python-dev/SKILL.md"
+  ],
+  "welcomeMessage": "Autonomous bootstrapping mode — ready to scaffold your Python project!"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "python-dev",
+  "description": "General Python development agent with testing, linting, and type-checking tools",
+  "prompt": "You are an expert Python developer. Follow the conventions defined in the python-dev skill (SKILL.md). Focus on strict typing with Optional, proper error handling, and maintainable architecture. Help with development, testing, debugging, and refactoring.",
+  "tools": [
+    "fs_read",
+    "fs_write",
+    "execute_bash",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "allowedTools": [
+    "fs_read",
+    "grep",
+    "glob",
+    "code"
+  ],
+  "toolsSettings": {
+    "execute_bash": {
+      "allowedCommands": [
+        "python --version",
+        "python -m pytest",
+        "python -m pytest *",
+        "python -m pylint *",
+        "python -m pyright",
+        "python -m pyright *",
+        "pip freeze",
+        "pip list",
+        "pip outdated",
+        "git status",
+        "git diff",
+        "git log --oneline -10"
+      ],
+      "autoAllowReadonly": true
+    }
+  },
+  "resources": [
+    "file://pyproject.toml",
+    "file://requirements.txt",
+    "file://README.md",
+    "skill://~/.kiro/skills/common-dev/SKILL.md",
+    "skill://~/.kiro/skills/python-dev/SKILL.md"
+  ],
+  "keyboardShortcut": "ctrl+shift+p",
+  "welcomeMessage": "Ready to help with Python development!"
+}
